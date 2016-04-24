@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="user" namespace="/" extends="interceptor">
+		<action name="userAction_*" method="{1}" class="userAction">
+			<result name="listUI">WEB-INF/jsp/scm/basedata/user/list.jsp</result>
+			<result name="action2action" type="redirectAction">userAction_showPageResult.action</result>
+			<result name="addUI" >WEB-INF/jsp/scm/basedata/user/add.jsp</result>
+			<result name="updateUI">WEB-INF/jsp/scm/basedata/user/update.jsp</result>
+			<result name="chain" type="chain">
+				<param name="actionName">userAction_</param>
+				<param name="method">showPageResult</param>
+			</result>
+		</action>
+	</package>
+</struts>
