@@ -4,6 +4,7 @@
   - 分页显示 数据库分页
   - 构建项目 maven
   - 项目框架 spring+hibernate+struts2
+  - 配置dbcp连接池来提高性能
   - 角色权限管理 struts2拦截器
   - 前后台交互 jsp or json
   
